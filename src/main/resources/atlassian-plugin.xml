@@ -12,16 +12,21 @@
     
     <web-item key="myLink" section="system.top.navigation.bar" weight="40" application="jira">
         <label key="Hello World Link"/>
-        <link linkId="myLinkId">/plugins/servlet/test</link>
+        <link linkId="myLinkId">/plugins/servlet/test/</link>
     </web-item>
 
     <servlet name="example-servlet" class="com.example.ExampleServlet" key="test">
-        <url-pattern>/test</url-pattern>
+        <url-pattern>/test/*</url-pattern>
     </servlet>
 
     <!-- add our web resources -->
     <web-resource key="jira-example-plugin-resources" name="jira-example-plugin Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
+        
+        <resource type="download" name="base.css" location="/css/base.css"/>
+        <resource type="download" name="Hypertree.css" location="/css/Hypertree.css"/>
+        <resource type="download" name="jit-yc.js" location="/js/jit-yc.js"/>
+        <resource type="download" name="example1.js" location="/js/example1.js"/>
         
         <resource type="download" name="jira-example-plugin.css" location="/css/jira-example-plugin.css"/>
         <resource type="download" name="jira-example-plugin.js" location="/js/jira-example-plugin.js"/>
@@ -33,7 +38,7 @@
 
         <resource type="download" name="PluginController.js" location="js/PluginController.js" />
         <resource type="download" name="PluginModel.js" location="js/PluginModel.js" />
-        <resource type="download" name="PluginView.soy.js" location="templates/PluginView.soy" />
+        <resource type="download" name="PluginView.soy.js" location="templates/pluginview.soy" />
         <resource type="download" name="PluginView.js" location="js/PluginView.js" />
 
         <context>jira-example-plugin</context>

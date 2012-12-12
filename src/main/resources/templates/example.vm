@@ -5,6 +5,7 @@
         <title>JIRA Example Plugin</title>
     </head>
     <body>
+        <input type="button" value="Init" onclick="init();"/>
         <div id="main-container" class="aui-panel">
         </div>
     </body>
